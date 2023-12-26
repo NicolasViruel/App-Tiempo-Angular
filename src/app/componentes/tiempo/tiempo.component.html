@@ -1,1 +1,37 @@
-<p>tiempo works!</p>
+<div class="container">
+    <br>
+    <h4>Consultar el tiempo por ciudad</h4>
+    <div class="col-lg-6 col-md-6 alineacion card">
+        <form [formGroup]="formulario" (ngSubmit)="consultar()">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label mx-1 my-1 ">Ciudad</label>
+              <input type="text" class="form-control "
+               formControlName="ciudad" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <p class="text-danger" *ngIf="formulario.get('ciudad')?.invalid && formulario.get('ciudad')?.touched">Por favor escriba una ciudad, menos santiago</p>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label mx-1 my-1 ">Codigo Ciudad</label>
+              <input type="text" class="form-control"
+              formControlName="codigo" id="exampleInputPassword1">
+              <p class="text-danger" *ngIf="formulario.get('codigo')?.invalid && formulario.get('codigo')?.touched">Por favor escriba un codigo valido</p>
+            </div>
+            <button type="submit" class="btn btn-primary my-2 mx-1">Consultar</button>
+          </form>
+    </div>
+    <img src="" alt="">
+    
+</div>
+<div class="container">
+    <div class="col-lg-6 alineacion">
+        <div class="card">
+            <div class="card-body">
+              <ul>
+                <li>Temperatura:</li>
+                <li>Ciudad:</li>
+                <li>Latitud:</li>
+                <li>Longitud:</li>
+              </ul>
+            </div>
+          </div>
+    </div>
+</div>

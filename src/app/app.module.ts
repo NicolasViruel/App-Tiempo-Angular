@@ -6,6 +6,7 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { MainComponent } from './componentes/main/main.component';
 import { TiempoComponent } from './componentes/tiempo/tiempo.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

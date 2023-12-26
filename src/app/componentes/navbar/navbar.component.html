@@ -1,14 +1,16 @@
 <nav class="navbar bg-dark navbar-expand-lg border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">AppTiempo</a>
+      <img src="../../../assets/logo.jpg" class="logo" alt="logo">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" [routerLink]="'main'">Home</a>
-          <a class="nav-link" [routerLink]="'tiempo'">Tiempo</a>
-        </div>
+          <a class="nav-link" [routerLink]="'main'" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+          <a class="nav-link" [routerLink]="'tiempo'" routerLinkActive="active">Tiempo</a>
       </div>
+      
+      </div>
+      <a class="navbar-brand ms-auto" href="/">AppTiempo</a>
     </div>
   </nav>

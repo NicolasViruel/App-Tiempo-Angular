@@ -1,0 +1,13 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.weather-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.weather-icon {
+    width: 200px;
+    height: 200px;
+}
