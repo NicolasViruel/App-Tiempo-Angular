@@ -1,6 +1,6 @@
 <div class="container">
     <br>
-    <h4>Consultar el tiempo por ciudad</h4>
+    <h4 class="text-center">Consultar el tiempo por ciudad</h4>
     <div class="col-lg-6 col-md-6 alineacion card">
         <form [formGroup]="formulario" (ngSubmit)="consultar()">
             <div class="mb-3">
@@ -18,20 +18,20 @@
             <button type="submit" class="btn btn-primary my-2 mx-1">Consultar</button>
           </form>
     </div>
-    <img src="" alt="">
-    
-</div>
-<div class="container">
-    <div class="col-lg-6 alineacion">
+    <div class="col-lg-6 col-md-6 alineacion">
         <div class="card">
             <div class="card-body">
               <ul>
-                <li>Temperatura:</li>
-                <li>Ciudad:</li>
-                <li>Latitud:</li>
-                <li>Longitud:</li>
+                <li>Descripcion: {{ descripcion }}</li>
+                <li>Temperatura:{{ temperatura }} </li>
+                <li>Humedad: {{ humedad }}</li>
+                <li>Ciudad: {{ name }}</li>
+                <li>Latitud: {{ latidud }}</li>
+                <li>Longitud: {{ longitud }}</li>
               </ul>
             </div>
           </div>
     </div>
+
+    
 </div>
