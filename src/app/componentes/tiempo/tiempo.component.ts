@@ -17,8 +17,9 @@ export class TiempoComponent implements OnInit {
   latidud: any;
   longitud: any;
   descripcion: any;
-
-
+  showError: boolean = false;
+  mensajeError: string = '';
+  fecha: Date = new Date();
 
 
   //inyectamos el formBuilder, que nos permite realizar las acciones del formulario
@@ -53,6 +54,7 @@ export class TiempoComponent implements OnInit {
       .getEstadoTiempo(this.formulario.get('ciudad')?.value, this.formulario.get('codigo')?.value)
       .subscribe(
         (respuesta: any) => {
+        this.showError = false;
         this.tiempo = respuesta;
         this.name = this.tiempo.name;
         this.temperatura = this.tiempo.main.temp;
@@ -63,7 +65,8 @@ export class TiempoComponent implements OnInit {
       },
 
         (error: any) => {
-          console.error('Error en la llamada a la API', error);
+          this.showError = true;
+          this.mensajeError = "Error al consultar el estado del tiempo";
         }
       );
   }
