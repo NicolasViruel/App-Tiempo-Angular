@@ -1,7 +1,7 @@
 <div class="container">
     <br>
     <h4 class="text-center">Consultar el tiempo por ciudad</h4>
-    <p class="text-center">{{fecha | date:'dd/mm/yyyy'}}</p>
+    <p class="text-center">{{fecha | date:'dd/MM/yyyy'}}</p>
     <div class="col-lg-6 col-md-6 alineacion card">
         <form [formGroup]="formulario" (ngSubmit)="consultar()">
             <div class="mb-3">
